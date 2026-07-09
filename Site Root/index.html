@@ -29,6 +29,7 @@
                 --mavs-muted: #8B7485;
                 --mavs-card-bg: #FDFBFA;
                 --mavs-gold-hover: #DAAB69;
+                --mavs-purple2: #865ab9;
             }
 
             body { font-family: 'Montserrat', sans-serif; background-color: var(--mavs-bg); color: var(--mavs-dark); }
@@ -41,8 +42,11 @@
             .top-bar a:hover { color: var(--mavs-gold) !important; }
 
             .header-main.header-transparent { border-bottom: 3px solid var(--mavs-gold); }
-            .navbar-light.bg-faded { background: var(--mavs-bg) !important; }
-            .navbar-light .navbar-nav .nav-link { color: var(--mavs-dark) !important; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85em; }
+            .navbar-light.bg-faded {
+                background: rgba(248, 239, 235, 0.88) !important;
+                backdrop-filter: blur(5px);
+            }
+            .navbar-light .navbar-nav .nav-link { color: var(--mavs-purple2) !important; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85em; }
             .navbar-light .navbar-nav .nav-link:hover,
             .navbar-light .navbar-nav .nav-link.active { color: var(--mavs-gold) !important; }
 
@@ -85,6 +89,14 @@
             .footer .lead { color: var(--mavs-gold); }
             .footer a { color: var(--mavs-rose); }
             .footer a:hover { color: var(--mavs-gold); }
+
+            .slider-box {
+                background: var(--mavs-bg);
+                border: 1px solid var(--mavs-purple2);
+                border-radius: 28px;
+                box-shadow: 0 0 0 rgba(0,0,0,0.05);
+                z-index: 1;
+            }
 
             .social-icon-sm.si-dark.si-dark-round { background: var(--mavs-muted) !important; }
             .social-icon-sm.si-dark.si-dark-round:hover { background: var(--mavs-gold) !important; }
@@ -133,8 +145,11 @@
             .mavs-form .btn-submit { background: var(--mavs-dark); color: var(--mavs-bg); padding: 14px 40px; border: none; border-radius: 25px; font-size: 1em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: all 0.3s ease; }
             .mavs-form .btn-submit:hover { background: var(--mavs-gold-hover); transform: translateY(-2px); box-shadow: 0 5px 20px rgba(201,168,76,0.4); }
 
-            .tp-caption.slider-title { color: #fff !important; font-family: 'Cormorant Garamond', serif !important; }
-            .tp-caption.slider-caption { color: rgba(255,255,255,0.85) !important; }
+            .tp-caption.slider-title { color: #4b2c83 !important; font-family: 'Cormorant Garamond', serif !important; }
+            .tp-caption.slider-caption { color: rgba(0, 0, 0, 0.85) !important; }
+
+            .tp-caption.slider-title2 { color: #4b2c83 !important; font-family: 'Cormorant Garamond', serif !important; }
+            .tp-caption.slider-caption2 { color: rgba(5, 0, 7, 0.85) !important; }
 
             .rev_slider .tparrows { background: var(--mavs-gold) !important; border-radius: 50% !important; width: 45px !important; height: 45px !important; }
             .rev_slider .tparrows:before { color: var(--mavs-dark) !important; font-size: 20px !important; line-height: 45px !important; }
@@ -168,7 +183,9 @@
         </div>
 
         <header class="header-main header-transparent">
-            <div class="top-bar">
+            
+            <!--
+            <div class="top-bar"> 
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 ml-auto">
@@ -194,13 +211,14 @@
                     </div>
                 </div>
             </div>
+            -->
             <nav class="navbar navbar-expand-lg navbar-light bg-faded">
                 <div class="container">
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarMavs" aria-controls="navbarMavs" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img class='logo logo-light hidden-md-down' src="images/mavs/logo-mavs.png" alt="Mavs Jewelry">
+                        <img class="logo logo-light hidden-md-down" src="images/mavs/logo-mavs.png" alt="Mavs Jewelry" style="height:50px; width:auto; display:block;">
                     </a>
                     <div id="navbarMavs" class="navbar-collapse collapse">
                         <ul class="navbar-nav ml-auto">
@@ -211,7 +229,7 @@
                             <li class="nav-item"><a data-scroll class="nav-link" href="#testimonios">Testimonios</a></li>
                             <li class="nav-item"><a data-scroll class="nav-link" href="#mision">Misión</a></li>
                             <li class="nav-item"><a data-scroll class="nav-link" href="#contacto">Contacto</a></li>
-                            <li class="nav-item"><a data-scroll class="nav-link btn btn-primary" href="https://wa.me/56989234239" target="_blank">Cotizar</a></li>
+                            <li class="nav-item"><a data-scrosll class="nav-link btn btn-primary" href="https://wa.me/56989234239" target="_blank">Cotizar</a></li>
                         </ul>
                     </div>
                 </div>
@@ -224,6 +242,15 @@
                 <ul>
                     <li data-transition="random">
                         <img src="images/mavs/fondo.png" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <div class="tp-caption tp-resizeme slider-box"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','70']"
+                             data-width="['760','720','640','300']" data-height="['260','240','220','220']"
+                             data-whitespace="normal"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="400"></div>
                         <div class="tp-caption tp-resizeme slider-title"
                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                              data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
@@ -253,6 +280,15 @@
                     </li>
                     <li data-transition="random">
                         <img src="images/mavs/producto-plata-1.jpg" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <div class="tp-caption tp-resizeme slider-box"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','70']"
+                             data-width="['760','720','640','300']" data-height="['260','240','220','220']"
+                             data-whitespace="normal"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="400"></div>
                         <div class="tp-caption tp-resizeme slider-title"
                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                              data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
@@ -282,6 +318,15 @@
                     </li>
                     <li data-transition="random">
                         <img src="images/mavs/producto-mostacilla-1.jpg" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <div class="tp-caption tp-resizeme slider-box"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','70']"
+                             data-width="['760','720','640','300']" data-height="['260','240','220','220']"
+                             data-whitespace="normal"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="400"></div>
                         <div class="tp-caption tp-resizeme slider-title"
                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                              data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
