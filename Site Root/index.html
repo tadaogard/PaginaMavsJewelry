@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Mavs Jewelry - Joyas artesanales en plata con piedras semipreciosas, mostacilla y alambrismo. Hechas a mano por María Angélica.">
+        <meta name="keywords" content="joyas, plata, piedras semipreciosas, mostacilla, alambrismo, artesanal, Chile">
+        <title>Mavs Jewelry - Joyas Artesanales en Plata</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="images/mavs/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/mavs/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/mavs/favicon-16x16.png">
+        <link rel="manifest" href="images/mavs/site.webmanifest">
+        <link rel="shortcut icon" href="favicon.ico">
+        <link href="css/plugins/plugins.css" rel="stylesheet">
+        <link href="css/style-restaurant.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+            body { font-family: 'Montserrat', sans-serif; }
+            h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
+            .section-title i { margin-right: 10px; color: #c9a84c; }
+            .product-gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 15px; }
+            .product-gallery img { border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); margin: 8px; border: 2px solid #E4C8D3; cursor: pointer; transition: all 0.3s ease; max-width: 200px; }
+            .product-gallery img:hover { transform: scale(1.05); box-shadow: 0 8px 30px rgba(201,168,76,0.3); border-color: #40363C; }
+            .btn-whatsapp { display: inline-block; margin-top: 18px; padding: 12px 30px; background: linear-gradient(135deg,#25D366,#128C7E); color: #fff; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; border-radius: 25px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(37,211,102,0.3); }
+            .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(37,211,102,0.5); background: linear-gradient(135deg,#2ee07a,#128C7E); color: #fff; }
+            blockquote.mavs-testimonial { max-width: 700px; margin: 0 auto 25px; padding: 30px 40px; background: rgba(201,168,76,0.06); border-radius: 15px; border: 1px solid rgba(201,168,76,0.2); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+            blockquote.mavs-testimonial p { font-size: 1.3em; font-style: italic; color: #9B59B6; text-align: center; margin-bottom: 10px; }
+            blockquote.mavs-testimonial footer { font-size: 0.9em; color: #E4C8D3; text-align: right; }
+            .whatsapp-float { position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: all 0.3s ease; z-index: 1000; }
+            .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.6); }
+            .whatsapp-float img { display: block; }
+            .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; align-items: center; justify-content: center; cursor: pointer; }
+            .lightbox-cerrar { position: absolute; top: 25px; right: 40px; font-size: 3em; color: #fff; cursor: pointer; transition: color 0.3s ease; line-height: 1; }
+            .lightbox-cerrar:hover { color: #c9a84c; }
+            .lightbox-imagen { max-width: 90%; max-height: 85%; border-radius: 8px; border: 3px solid #c9a84c; box-shadow: 0 0 50px rgba(201,168,76,0.2); cursor: default; }
+            .confianza-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
+            .confianza-item { padding: 30px 20px; background: #FFFFFF; border-radius: 12px; border: 1px solid #E4C8D3; text-align: center; transition: all 0.3s ease; }
+            .confianza-item:hover { transform: translateY(-5px); border-color: #40363C; }
+            .confianza-icono { display: block; font-size: 2.8em; margin-bottom: 15px; }
+            .confianza-item h3 { color: #40363C; font-size: 1.15em; margin-top: 0; margin-bottom: 10px; letter-spacing: 1px; }
+            .confianza-item p { font-size: 0.95em; color: #8B7485; text-align: center; margin-bottom: 0; }
+            .mavs-contact ul { list-style: none; display: inline-block; text-align: left; }
+            .mavs-contact ul li { padding: 8px 0; font-size: 1.05em; }
+            .mavs-contact ul li strong { color: #40363C; margin-right: 8px; }
+            .mavs-form { max-width: 500px; margin: 25px auto 0; padding: 30px; background: #FFFFFF; border-radius: 15px; border: 1px solid rgba(201,168,76,0.15); }
+            .mavs-form .form-group { margin-bottom: 20px; text-align: left; }
+            .mavs-form label { display: block; font-size: 0.85em; color: #8B7485; margin-bottom: 5px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+            .mavs-form input, .mavs-form textarea { width: 100%; padding: 12px 15px; background: #F8EFEB; border: 1px solid rgba(201,168,76,0.3); border-radius: 8px; color: #40363C; font-size: 1em; }
+            .mavs-form input:focus, .mavs-form textarea:focus { outline: none; border-color: #40363C; box-shadow: 0 0 15px rgba(201,168,76,0.2); }
+            .mavs-form .btn-submit { background: #40363C; color: #F8EFEB; padding: 14px 40px; border: none; border-radius: 25px; font-size: 1em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: all 0.3s ease; }
+            .mavs-form .btn-submit:hover { background: #DAAB69; transform: translateY(-2px); box-shadow: 0 5px 20px rgba(201,168,76,0.4); }
+        </style>
+    </head>
+
+    <body data-spy="scroll" data-offset="71" data-target="#navbarMavs">
+        <div id="preloader">
+            <div id="preloader-inner"></div>
+        </div>
+
+        <header class="header-main header-transparent">
+            <div class="top-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 ml-auto">
+                            <div class="float-right clearfix top-socials">
+                                <a href="https://www.instagram.com/mavs_jewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-instagram">
+                                    <i class="fa fa-instagram"></i>
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a href="https://www.tiktok.com/@mavs_jewerly" target="_blank" class="social-icon-sm si-dark si-dark-round si-twitter">
+                                    <i class="fa fa-twitter"></i>
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="https://www.facebook.com/MvJewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-facebook">
+                                    <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="https://wa.me/56989234239" target="_blank" class="social-icon-sm si-dark si-dark-round si-linkedin">
+                                    <i class="fa fa-whatsapp"></i>
+                                    <i class="fa fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-faded">
+                <div class="container">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarMavs" aria-controls="navbarMavs" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img class='logo logo-light hidden-md-down' src="images/mavs/logo-mavs.png" alt="Mavs Jewelry">
+                    </a>
+                    <div id="navbarMavs" class="navbar-collapse collapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a data-scroll class="nav-link active" href="#quienes-somos">Quiénes Somos</a></li>
+                            <li class="nav-item"><a data-scroll class="nav-link" href="#productos">Productos</a></li>
+                            <li class="nav-item"><a data-scroll class="nav-link" href="#historia">Historia</a></li>
+                            <li class="nav-item"><a data-scroll class="nav-link" href="#confianza">Confianza</a></li>
+                            <li class="nav-item"><a data-scroll class="nav-link" href="#testimonios">Testimonios</a></li>
+                            <li class="nav-item"><a data-scroll class="nav-link" href="#mision">Misión</a></li>
+                            <li class="nav-item"><a data-scroll class="nav-link" href="#contacto">Contacto</a></li>
+                            <li class="nav-item"><a data-scroll class="nav-link btn btn-primary" href="https://wa.me/56989234239" target="_blank">Cotizar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- slider revolution start -->
+        <div class="rev_slider_wrapper oHidden" id="home">
+            <div id="slider1" class="rev_slider fullwidthabanner" data-version="5.0">
+                <ul>
+                    <li data-transition="random">
+                        <img src="images/mavs/fondo.png" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <div class="tp-caption tp-resizeme slider-title"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                             data-fontsize="['80','80','80','45']" data-lineheight="['80','80','80','50']"
+                             data-width="none" data-height="none"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="500">Mavs Jewelry</div>
+                        <div class="tp-caption tp-resizeme slider-caption"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['90','90','90','70']"
+                             data-fontsize="['20','20','20','15']" data-lineheight="['25','25','25','20']"
+                             data-width="none" data-height="none" data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="1000">Arte en plata con elegancia · Joyas que te acompañan a brillar</div>
+                        <div class="tp-caption tp-resizeme slider-button"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['160','160','140','140']"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="1500"><a href="https://wa.me/56989234239" target="_blank" class="btn btn-xl btn-dark btn-primary">Cotizar por WhatsApp</a></div>
+                    </li>
+                    <li data-transition="random">
+                        <img src="images/mavs/producto-plata-1.jpg" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <div class="tp-caption tp-resizeme slider-title"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                             data-fontsize="['80','80','80','45']" data-lineheight="['80','80','80','50']"
+                             data-width="none" data-height="none"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="500">Joyas en Plata</div>
+                        <div class="tp-caption tp-resizeme slider-caption"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['90','90','90','70']"
+                             data-fontsize="['20','20','20','15']" data-lineheight="['25','25','25','20']"
+                             data-width="none" data-height="none" data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="1000">Plata nacional con piedras semipreciosas y cristales Swarovski</div>
+                        <div class="tp-caption tp-resizeme slider-button"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['160','160','140','140']"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="1500"><a href="https://wa.me/56989234239" target="_blank" class="btn btn-xl btn-primary">Cotizar</a></div>
+                    </li>
+                    <li data-transition="random">
+                        <img src="images/mavs/producto-mostacilla-1.jpg" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <div class="tp-caption tp-resizeme slider-title"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                             data-fontsize="['80','80','80','45']" data-lineheight="['80','80','80','50']"
+                             data-width="none" data-height="none"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="500">Mostacilla Calibrada</div>
+                        <div class="tp-caption tp-resizeme slider-caption"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['90','90','90','70']"
+                             data-fontsize="['20','20','20','15']" data-lineheight="['25','25','25','20']"
+                             data-width="none" data-height="none" data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="1000">Miyuki con cristales checos · Tejidos a mano</div>
+                        <div class="tp-caption tp-resizeme slider-button"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['160','160','140','140']"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="1500"><a href="https://wa.me/56989234239" target="_blank" class="btn btn-xl btn-primary">Cotizar</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- end slider revolution -->
+
+        <!-- Quiénes Somos -->
+        <div class="bg-white" id="quienes-somos">
+            <div class="container pt90 pb60">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb30">
+                        <h3 class="h1 font300 mb30"><i class="fa-regular fa-gem" style="color:#c9a84c;"></i> Quiénes Somos</h3>
+                        <p>Somos un emprendimiento que nació de la pasión por transformar la plata y las piedras semipreciosas en joyas que transmiten energía, belleza y significado. Cada creación es elaborada a mano con dedicación, cuidando cada detalle para que sea más que un accesorio: un símbolo de conexión y autenticidad.</p>
+                        <p>Creemos que la elegancia también puede ser espiritual, y nuestras piezas buscan acompañar a cada persona en su camino.</p>
+                        <a href="https://wa.me/56989234239" target="_blank" class="btn btn-dark">Cotizar por WhatsApp</a>
+                    </div>
+                    <div class="col-lg-6 mb30">
+                        <img src="images/mavs/logo-mavs.png" alt="Mavs Jewelry" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Productos -->
+        <div class="bg-primary pt90 pb90" id="productos">
+            <div class="container">
+                <div class="center-title">
+                    <h2 class="text-white">Nuestros Productos</h2>
+                    <p class="text-white-gray">Joyas artesanales hechas a mano con amor y dedicación</p>
+                </div>
+                <div class="row">
+                    <div class="owl-carousel owl-theme carousel-cards">
+                        <div class="item">
+                            <a class="card-image" href="#">
+                                <img src="images/mavs/producto-plata-1.jpg" alt="Joyas en Plata" class="img-fluid">
+                                <h4>Joyas en Plata</h4>
+                                <span class="float-right lead">+ info</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a class="card-image" href="#">
+                                <img src="images/mavs/producto-plata-2.jpg" alt="Joyas en Plata" class="img-fluid">
+                                <h4>Plata y Piedras</h4>
+                                <span class="float-right lead">+ info</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a class="card-image" href="#">
+                                <img src="images/mavs/producto-plata-3.jpg" alt="Joyas en Plata" class="img-fluid">
+                                <h4>Plata + Swarovski</h4>
+                                <span class="float-right lead">+ info</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a class="card-image" href="#">
+                                <img src="images/mavs/producto-plata-4.jpg" alt="Joyas en Plata" class="img-fluid">
+                                <h4>Diseños Únicos</h4>
+                                <span class="float-right lead">+ info</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a class="card-image" href="#">
+                                <img src="images/mavs/producto-mostacilla-1.jpg" alt="Mostacilla" class="img-fluid">
+                                <h4>Mostacilla Calibrada</h4>
+                                <span class="float-right lead">+ info</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a class="card-image" href="#">
+                                <img src="images/mavs/producto-mostacilla-2.jpg" alt="Mostacilla" class="img-fluid">
+                                <h4>Miyuki Tejido</h4>
+                                <span class="float-right lead">+ info</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a class="card-image" href="#">
+                                <img src="images/mavs/producto-mostacilla-3.jpg" alt="Mostacilla" class="img-fluid">
+                                <h4>Cristales Checos</h4>
+                                <span class="float-right lead">+ info</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a class="card-image" href="#">
+                                <img src="images/mavs/producto-alambrismo-1.jpg" alt="Alambrismo" class="img-fluid">
+                                <h4>Alambrismo</h4>
+                                <span class="float-right lead">+ info</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nuestra Historia (half image) -->
+        <div class="half-image-content bg-faded" id="historia">
+            <div class="content-img bg-parallax pos-left" data-jarallax='{"speed": 0.2}' style="background:url(images/mavs/fundadora.jpg) no-repeat; background-size:cover;">
+            </div>
+            <img src="images/mavs/fundadora.jpg" class="visible-lg-down hidden-lg-up img-fluid" alt="María Angélica">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 ml-auto pt80 pb80">
+                        <h2 class="mb40"><i class="fa-solid fa-feather-pointed" style="color:#c9a84c;"></i> Nuestra Historia</h2>
+                        <div class="clearfix">
+                            <h4>María Angélica · Orfebre</h4>
+                            <p>Mi nombre es María Angélica, soy de oficio orfebre y este emprendimiento nació desde la resiliencia y el deseo de transformar las dificultades en inspiración. A través de la plata y las piedras semipreciosas, la mostacilla calibrada y el alambrismo, encontré un camino para expresar fuerza, elegancia y misticismo.</p>
+                            <p>Cada joya representa no solo un accesorio, sino también un símbolo de superación y significado personal.</p>
+                            <a href="https://wa.me/56989234239" target="_blank" class="btn btn-outline-primary">Cotizar por WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonios -->
+        <div class="pt90 pb90 bg-white">
+            <div class="container">
+                <div class="center-title">
+                    <h2>Testimonios</h2>
+                    <p>Lo que dicen nuestros clientes</p>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-8 mr-auto ml-auto">
+                        <div class="owl-carousel owl-theme carousel-testimonials">
+                            <div class="item">
+                                <p class="lead">"Excelente atención y productos de gran calidad."</p>
+                                <h5>Carolina Mendoza -</h5>
+                            </div>
+                            <div class="item">
+                                <p class="lead">"Mis aretes de plata con lapislázuli son hermosos. Se nota el trabajo artesanal y el cariño en cada detalle. ¡100% recomendado!"</p>
+                                <h5>Daniela Rojas -</h5>
+                            </div>
+                            <div class="item">
+                                <p class="lead">"Compré un collar tejido en mostacilla para un regalo y la persona quedó fascinada. La calidad y el diseño son únicos. Volveré a comprar sin dudas."</p>
+                                <h5>Francisca López -</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Por Qué Confiar en Nosotros -->
+        <div class="bg-dark pt90 pb60" id="confianza">
+            <div class="container">
+                <div class="center-title">
+                    <h2 class="text-white">Por Qué Confiar en Nosotros</h2>
+                    <p class="text-white-gray">Nuestros valores</p>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-3 mb30">
+                        <span style="font-size:3.5em;">&#x1F48E;</span>
+                        <h4 class="text-white">Materiales Certificados</h4>
+                        <p>Plata nacional, piedras semipreciosas auténticas y cristales premium garantizados.</p>
+                    </div>
+                    <div class="col-md-3 mb30">
+                        <span style="font-size:3.5em;">&#x1F3ED;</span>
+                        <h4 class="text-white">Hecho a Mano</h4>
+                        <p>Cada pieza es elaborada artesanalmente por María Angélica, orfebre de oficio.</p>
+                    </div>
+                    <div class="col-md-3 mb30">
+                        <span style="font-size:3.5em;">&#x1F4E6;</span>
+                        <h4 class="text-white">Envío Seguro</h4>
+                        <p>Empacamos con cuidado para que tu joya llegue en perfectas condiciones a todo Chile.</p>
+                    </div>
+                    <div class="col-md-3 mb30">
+                        <span style="font-size:3.5em;">&#x1F468;&#x200D;&#x1F4BB;</span>
+                        <h4 class="text-white">Atención Personalizada</h4>
+                        <p>Te asesoramos vía WhatsApp para encontrar la joya perfecta para ti o para regalar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Misión y Visión (parallax) -->
+        <div class="bg-parallax parallax-overlay pt100 pb100" id="mision" data-jarallax='{"speed": 0.2}' style="background:url(images/mavs/fondo-old.png) no-repeat; background-size:cover;">
+            <div class="container">
+                <div class="center-title">
+                    <h2 class="text-white">Misión y Visión</h2>
+                    <p class="text-white-gray">Nuestra razón de ser</p>
+                </div>
+                <div class="food-menu-card">
+                    <div>
+                        <ul class="nav tabs-menu-nav justify-content-center mb30" role="tablist">
+                            <li class="nav-item" role="presentation"><a class="active nav-link" href="#mision-tab" aria-controls="mision-tab" role="tab" data-toggle="tab">Misión</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#vision-tab" aria-controls="vision-tab" role="tab" data-toggle="tab">Visión</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active show fade" id="mision-tab">
+                                <div class="row">
+                                    <div class="col-md-8 mr-auto ml-auto text-center">
+                                        <p class="lead text-white" style="font-size:1.2em; line-height:1.9;">Mi misión es transformar la plata y las piedras semipreciosas en joyas únicas que reflejen resiliencia y misticismo y agregar un atizbo de elegancia a la mostacilla con cristales y alambrismo. Cada diseño nace con el propósito de inspirar y conectar con la esencia de cada persona.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="vision-tab">
+                                <div class="row">
+                                    <div class="col-md-8 mr-auto ml-auto text-center">
+                                        <p class="lead text-white" style="font-size:1.2em; line-height:1.9;">Mi visión es convertir a Mavs Jewelry en un referente de joyas artesanales en plata con piedras semipreciosas, mostacilla y alambrismo, reconocidos por transmitir elegancia, energía y significado en cada creación. Aspiramos a que cada joya sea un puente entre la belleza externa y la fuerza interior, inspirando a quienes la llevan a brillar con autenticidad.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galería de Productos -->
+        <div class="pt90 pb90 bg-dark clearfix" id="galeria">
+            <div class="container gallery-row clearfix">
+                <div class="center-title">
+                    <h2 class="text-white">Galería de Productos</h2>
+                    <p class="text-white-gray">Cada pieza es única, hecha a mano con dedicación</p>
+                </div>
+                <a href="images/mavs/producto-plata-1.jpg">
+                    <img src="images/mavs/producto-plata-1.jpg" alt="" class="img-fluid">
+                </a>
+                <a href="images/mavs/producto-plata-2.jpg">
+                    <img src="images/mavs/producto-plata-2.jpg" alt="" class="img-fluid">
+                </a>
+                <a href="images/mavs/producto-plata-3.jpg">
+                    <img src="images/mavs/producto-plata-3.jpg" alt="" class="img-fluid">
+                </a>
+                <a href="images/mavs/producto-plata-4.jpg">
+                    <img src="images/mavs/producto-plata-4.jpg" alt="" class="img-fluid">
+                </a>
+                <a href="images/mavs/producto-mostacilla-1.jpg">
+                    <img src="images/mavs/producto-mostacilla-1.jpg" alt="" class="img-fluid">
+                </a>
+                <a href="images/mavs/producto-mostacilla-2.jpg">
+                    <img src="images/mavs/producto-mostacilla-2.jpg" alt="" class="img-fluid">
+                </a>
+                <a href="images/mavs/producto-mostacilla-3.jpg">
+                    <img src="images/mavs/producto-mostacilla-3.jpg" alt="" class="img-fluid">
+                </a>
+                <a href="images/mavs/producto-alambrismo-1.jpg">
+                    <img src="images/mavs/producto-alambrismo-1.jpg" alt="" class="img-fluid">
+                </a>
+                <a href="images/mavs/fundadora.jpg">
+                    <img src="images/mavs/fundadora.jpg" alt="" class="img-fluid">
+                </a>
+                <a href="images/mavs/logo-mavs.png">
+                    <img src="images/mavs/logo-mavs.png" alt="" class="img-fluid">
+                </a>
+            </div>
+        </div>
+
+        <!-- Contacto -->
+        <div id="contacto">
+            <div class="container pt90 pb60">
+                <div class="center-title">
+                    <h2>Contacto</h2>
+                    <p>Estamos aquí para ayudarte</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb30">
+                        <div class="mavs-contact">
+                            <h3>WhatsApp</h3>
+                            <p><a href="https://wa.me/56989234239" target="_blank">+56 9 8923 4239</a></p>
+                            <h3>Correo Electrónico</h3>
+                            <p><a href="mailto:mavenegas.s.mv@gmail.com">mavenegas.s.mv@gmail.com</a></p>
+                            <h3>Redes Sociales</h3>
+                            <ul>
+                                <li><strong>Instagram:</strong> <a href="https://www.instagram.com/mavs_jewelry" target="_blank">@mavs_jewelry</a></li>
+                                <li><strong>TikTok:</strong> <a href="https://www.tiktok.com/@mavs_jewerly" target="_blank">@mavs_jewerly</a></li>
+                                <li><strong>Facebook:</strong> <a href="https://www.facebook.com/MvJewelry" target="_blank">Mv Jewelry</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb30">
+                        <h3>Envíanos un Mensaje</h3>
+                        <form class="mavs-form" action="#" method="post">
+                            <div class="form-group">
+                                <label for="nombre">Nombre *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje *</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer pt50 pb20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb30">
+                        <a href="#home" data-scroll class="h6">
+                            <img src="images/mavs/logo-mavs.png" alt="Mavs Jewelry" class="mb30" style="max-width:150px;">
+                        </a>
+                        <p>Joyas artesanales en plata con piedras semipreciosas, mostacilla y alambrismo. Hechas a mano por María Angélica, orfebre de oficio.</p>
+                    </div>
+                    <div class="col-lg-4 mb30">
+                        <h4 class="mb30">Enlaces</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#quienes-somos" data-scroll>Quiénes Somos</a></li>
+                            <li><a href="#productos" data-scroll>Productos</a></li>
+                            <li><a href="#historia" data-scroll>Historia</a></li>
+                            <li><a href="#testimonios" data-scroll>Testimonios</a></li>
+                            <li><a href="#contacto" data-scroll>Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 mb30">
+                        <h4 class="mb30">Síguenos</h4>
+                        <span class="clearfix">
+                            <a href="https://www.instagram.com/mavs_jewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-instagram">
+                                <i class="fa fa-instagram"></i>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@mavs_jewerly" target="_blank" class="social-icon-sm si-dark si-dark-round si-twitter">
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="https://www.facebook.com/MvJewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-facebook">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://wa.me/56989234239" target="_blank" class="social-icon-sm si-dark si-dark-round si-linkedin">
+                                <i class="fa fa-whatsapp"></i>
+                                <i class="fa fa-whatsapp"></i>
+                            </a>
+                        </span>
+                        <div class="pt30">
+                            <span>WhatsApp</span>
+                            <p class="lead">+56 9 8923 4239</p>
+                            <span>Email</span>
+                            <p class="lead">mavenegas.s.mv@gmail.com</p>
+                            &copy; 2026 Mavs Jewelry. Todos los derechos reservados.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#" class="back-to-top" id="back-to-top"><i class="ti-angle-up"></i></a>
+
+        <a class="whatsapp-float" href="https://wa.me/56989234239" target="_blank" rel="noopener noreferrer">
+            <img src="images/mavs/whatsapp-icon.svg" alt="WhatsApp" width="30" height="30">
+        </a>
+
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-cerrar">&times;</span>
+            <img class="lightbox-imagen" src="" alt="">
+        </div>
+
+        <script src="js/plugins/plugins.js"></script>
+        <script src="js/restaurant.custom.js"></script>
+
+        <!--revolution slider-->
+        <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
+        <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+        <script>
+            jQuery(document).ready(function () {
+                jQuery("#slider1").revolution({
+                    sliderType: "standard",
+                    jsFileLocation: "revolution/js/",
+                    sliderLayout: "fullscreen",
+                    dottedOverlay: "none",
+                    delay: 9000,
+                    navigation: {
+                        arrows: {enable: true}
+                    },
+                    parallax: {
+                        type: "on",
+                        levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85],
+                        origo: "enterpoint",
+                        speed: 400,
+                        bgparallax: "on",
+                        disable_onmobile: "off"
+                    },
+                    gridwidth: 1140,
+                    gridheight: 600
+                });
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var galerias = document.querySelectorAll('.product-gallery');
+                var lightbox = document.getElementById('lightbox');
+                var lightboxImg = lightbox.querySelector('.lightbox-imagen');
+                var closeBtn = lightbox.querySelector('.lightbox-cerrar');
+
+                galerias.forEach(function (galeria) {
+                    galeria.addEventListener('click', function (e) {
+                        if (e.target.tagName === 'IMG') {
+                            lightboxImg.src = e.target.src;
+                            lightboxImg.alt = e.target.alt;
+                            lightbox.style.display = 'flex';
+                        }
+                    });
+                });
+
+                function cerrarLightbox() { lightbox.style.display = 'none'; }
+                closeBtn.addEventListener('click', cerrarLightbox);
+                lightbox.addEventListener('click', function (e) { if (e.target === lightbox) { cerrarLightbox(); } });
+                document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { cerrarLightbox(); } });
+            });
+        </script>
+    </body>
+</html>
