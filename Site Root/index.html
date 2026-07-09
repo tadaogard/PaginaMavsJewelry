@@ -21,15 +21,15 @@
             @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
             :root {
-                --mavs-bg: #F8EFEB;
-                --mavs-dark: #40363C;
-                --mavs-gold: #c9a84c;
-                --mavs-purple: #9B59B6;
-                --mavs-rose: #E4C8D3;
-                --mavs-muted: #8B7485;
-                --mavs-card-bg: #FDFBFA;
-                --mavs-gold-hover: #DAAB69;
-                --mavs-purple2: #865ab9;
+                --mavs-bg: #FDF8FA; 
+                --mavs-dark: #4A3E45;
+                --mavs-gold: #E8D39C;
+                --mavs-purple: #D8B8F0;
+                --mavs-rose: #F3CADC;
+                --mavs-muted: #8B7A84;
+                --mavs-card-bg: #FFFFFF;
+                --mavs-gold-hover: #DDBE7C;
+                --mavs-purple2: #A983C7;
             }
 
             body { font-family: 'Montserrat', sans-serif; background-color: var(--mavs-bg); color: var(--mavs-dark); }
@@ -43,7 +43,7 @@
 
             .header-main.header-transparent { border-bottom: 3px solid var(--mavs-gold); }
             .navbar-light.bg-faded {
-                background: rgba(248, 239, 235, 0.88) !important;
+                background: rgba(253, 248, 250,.90) !important;
                 backdrop-filter: blur(5px);
             }
             .navbar-light .navbar-nav .nav-link { color: var(--mavs-purple2) !important; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85em; }
@@ -104,16 +104,16 @@
             .back-to-top { background: var(--mavs-gold) !important; color: var(--mavs-dark) !important; }
             .back-to-top:hover { background: var(--mavs-gold-hover) !important; }
 
-            .parallax-overlay { background-color: rgba(64,54,60,0.75) !important; background-blend-mode: overlay; }
+            .parallax-overlay { background-color: rgba(74,62,69,.75) !important; background-blend-mode: overlay; }
 
             .product-gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 15px; }
             .product-gallery img { border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); margin: 8px; border: 2px solid var(--mavs-rose); cursor: pointer; transition: all 0.3s ease; max-width: 200px; }
-            .product-gallery img:hover { transform: scale(1.05); box-shadow: 0 8px 30px rgba(201,168,76,0.3); border-color: var(--mavs-dark); }
+            .product-gallery img:hover { transform: scale(1.05); box-shadow: 0 8px 30px rgba(232,211,156,.30); border-color: var(--mavs-dark); }
 
             .btn-whatsapp { display: inline-block; margin: 18px 0 0; padding: 12px 30px; background: linear-gradient(135deg,#25D366,#128C7E); color: #fff; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; border-radius: 25px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(37,211,102,0.3); }
             .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(37,211,102,0.5); background: linear-gradient(135deg,#2ee07a,#128C7E); color: #fff; }
 
-            blockquote.mavs-testimonial { max-width: 700px; margin: 0 auto 25px; padding: 30px 40px; background: rgba(201,168,76,0.06); border-radius: 15px; border: 1px solid rgba(201,168,76,0.2); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+            blockquote.mavs-testimonial { max-width: 700px; margin: 0 auto 25px; padding: 30px 40px; background: rgba(232,211,156,.10); border-radius: 15px; border: 1px solid rgba(232,211,156,.20); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
             blockquote.mavs-testimonial p { font-size: 1.3em; font-style: italic; color: var(--mavs-purple); text-align: center; margin-bottom: 10px; }
             blockquote.mavs-testimonial footer { font-size: 0.9em; color: var(--mavs-rose); text-align: right; }
 
@@ -124,7 +124,7 @@
             .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; align-items: center; justify-content: center; cursor: pointer; }
             .lightbox-cerrar { position: absolute; top: 25px; right: 40px; font-size: 3em; color: #fff; cursor: pointer; transition: color 0.3s ease; line-height: 1; }
             .lightbox-cerrar:hover { color: var(--mavs-gold); }
-            .lightbox-imagen { max-width: 90%; max-height: 85%; border-radius: 8px; border: 3px solid var(--mavs-gold); box-shadow: 0 0 50px rgba(201,168,76,0.2); cursor: default; }
+            .lightbox-imagen { max-width: 90%; max-height: 85%; border-radius: 8px; border: 3px solid var(--mavs-gold); box-shadow: 0 0 50px rgba(232,211,156,.20); cursor: default; }
 
             .confianza-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
             .confianza-item { padding: 30px 20px; background: #FFFFFF; border-radius: 12px; border: 1px solid var(--mavs-rose); text-align: center; transition: all 0.3s ease; }
@@ -137,18 +137,18 @@
             .mavs-contact ul li { padding: 8px 0; font-size: 1.05em; }
             .mavs-contact ul li strong { color: var(--mavs-dark); margin-right: 8px; }
 
-            .mavs-form { max-width: 500px; margin: 25px auto 0; padding: 30px; background: #FFFFFF; border-radius: 15px; border: 1px solid rgba(201,168,76,0.15); }
+            .mavs-form { max-width: 500px; margin: 25px auto 0; padding: 30px; background: #FFFFFF; border-radius: 15px; border: 1px solid rgba(232,211,156,.10); }
             .mavs-form .form-group { margin-bottom: 20px; text-align: left; }
             .mavs-form label { display: block; font-size: 0.85em; color: var(--mavs-muted); margin-bottom: 5px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-            .mavs-form input, .mavs-form textarea { width: 100%; padding: 12px 15px; background: var(--mavs-bg); border: 1px solid rgba(201,168,76,0.3); border-radius: 8px; color: var(--mavs-dark); font-size: 1em; }
-            .mavs-form input:focus, .mavs-form textarea:focus { outline: none; border-color: var(--mavs-dark); box-shadow: 0 0 15px rgba(201,168,76,0.2); }
+            .mavs-form input, .mavs-form textarea { width: 100%; padding: 12px 15px; background: var(--mavs-bg); border: 1px solid rgba(232,211,156,.30); border-radius: 8px; color: var(--mavs-dark); font-size: 1em; }
+            .mavs-form input:focus, .mavs-form textarea:focus { outline: none; border-color: var(--mavs-dark); box-shadow: 0 0 15px rgba(232,211,156,.20); }
             .mavs-form .btn-submit { background: var(--mavs-dark); color: var(--mavs-bg); padding: 14px 40px; border: none; border-radius: 25px; font-size: 1em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: all 0.3s ease; }
-            .mavs-form .btn-submit:hover { background: var(--mavs-gold-hover); transform: translateY(-2px); box-shadow: 0 5px 20px rgba(201,168,76,0.4); }
+            .mavs-form .btn-submit:hover { background: var(--mavs-gold-hover); transform: translateY(-2px); box-shadow: 0 5px 20px rgba(232,211,156,.40); }
 
-            .tp-caption.slider-title { color: #4b2c83 !important; font-family: 'Cormorant Garamond', serif !important; }
+            .tp-caption.slider-title { color:var(--mavs-purple) !important; font-family: 'Cormorant Garamond', serif !important; }
             .tp-caption.slider-caption { color: rgba(0, 0, 0, 0.85) !important; }
 
-            .tp-caption.slider-title2 { color: #4b2c83 !important; font-family: 'Cormorant Garamond', serif !important; }
+            .tp-caption.slider-title2 { color:var(--mavs-purple2) !important; font-family: 'Cormorant Garamond', serif !important; }
             .tp-caption.slider-caption2 { color: rgba(5, 0, 7, 0.85) !important; }
 
             .rev_slider .tparrows { background: var(--mavs-gold) !important; border-radius: 50% !important; width: 45px !important; height: 45px !important; }
@@ -173,7 +173,7 @@
             #preloader-inner { border-color: var(--mavs-gold) !important; border-top-color: var(--mavs-dark) !important; }
 
             .navbar-light .navbar-toggler { border-color: var(--mavs-dark); }
-            .navbar-light .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%2340363C' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+            .navbar-light .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%234A3E45' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
         </style>
     </head>
 
@@ -184,42 +184,48 @@
 
         <header class="header-main header-transparent">
             
-            <!--
-            <div class="top-bar"> 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 ml-auto">
-                            <div class="float-right clearfix top-socials">
-                                <a href="https://www.instagram.com/mavs_jewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-instagram">
-                                    <i class="fa fa-instagram"></i>
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                                <a href="https://www.tiktok.com/@mavs_jewerly" target="_blank" class="social-icon-sm si-dark si-dark-round si-twitter">
-                                    <i class="fa fa-twitter"></i>
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                                <a href="https://www.facebook.com/MvJewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-facebook">
-                                    <i class="fa fa-facebook"></i>
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                                <a href="https://wa.me/56989234239" target="_blank" class="social-icon-sm si-dark si-dark-round si-linkedin">
-                                    <i class="fa fa-whatsapp"></i>
-                                    <i class="fa fa-whatsapp"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+<div class="top-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center top-socials">
+
+                    <a href="https://www.instagram.com/mavs_jewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@mavs_jewerly" target="_blank" class="social-icon-sm si-dark si-dark-round si-tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/MvJewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="https://wa.me/56989234239" target="_blank" class="social-icon-sm si-dark si-dark-round si-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+
                 </div>
             </div>
-            -->
+        </div>
+    </div>
+</div> <!--fin del top-bar-->
+
+            <div class="text-center" style="background: var(--mavs-bg); padding: 12px 0 0px 0;">
+                <a href="index.html">
+                    <img src="images/mavs/logo-mavs.png"
+                     alt="Mavs Jewelry"
+                      style="height:90px; width:90px; object-fit:cover; border-radius:50%; box-shadow: 0 4px 15px rgba(0,0,0,.15);">
+                </a>
+            </div>
+
             <nav class="navbar navbar-expand-lg navbar-light bg-faded">
                 <div class="container">
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarMavs" aria-controls="navbarMavs" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img class="logo logo-light hidden-md-down" src="images/mavs/logo-mavs.png" alt="Mavs Jewelry" style="height:50px; width:auto; display:block;">
-                    </a>
+                    
                     <div id="navbarMavs" class="navbar-collapse collapse">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item"><a data-scroll class="nav-link active" href="#quienes-somos">Quiénes Somos</a></li>
@@ -364,7 +370,7 @@
             <div class="container pt90 pb60">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb30">
-                        <h3 class="h1 font300 mb30"><i class="fa-regular fa-gem" style="color:#c9a84c;"></i> Quiénes Somos</h3>
+                        <h3 class="h1 font300 mb30"><i class="fa-regular fa-gem" style="color:var(--mavs-gold);"></i> Quiénes Somos</h3>
                         <p>Somos un emprendimiento que nació de la pasión por transformar la plata y las piedras semipreciosas en joyas que transmiten energía, belleza y significado. Cada creación es elaborada a mano con dedicación, cuidando cada detalle para que sea más que un accesorio: un símbolo de conexión y autenticidad.</p>
                         <p>Creemos que la elegancia también puede ser espiritual, y nuestras piezas buscan acompañar a cada persona en su camino.</p>
                         <a href="https://wa.me/56989234239" target="_blank" class="btn btn-dark">Cotizar por WhatsApp</a>
@@ -527,7 +533,7 @@
         </div>
 
         <!-- Misión y Visión (parallax) -->
-        <div class="bg-parallax parallax-overlay pt100 pb100" id="mision" data-jarallax='{"speed": 0.2}' style="background:url(images/mavs/fondo-old.png) no-repeat; background-size:cover;">
+        <div class="bg-parallax parallax-overlay pt100 pb100" id="mision" data-jarallax='{"speed": 0.2}' style="background:url(images/mavs/fondo.png) no-repeat; background-size:cover;">
             <div class="container">
                 <div class="center-title">
                     <h2 class="text-white">Misión y Visión</h2>
