@@ -12,45 +12,12 @@
         <link rel="manifest" href="images/mavs/site.webmanifest">
         <link rel="shortcut icon" href="favicon.ico">
         <link href="css/plugins/plugins.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
+        <link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
+        <link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
         <link href="css/style-restaurant.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
-            body { font-family: 'Montserrat', sans-serif; }
-            h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
-            .section-title i { margin-right: 10px; color: #c9a84c; }
-            .product-gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 15px; }
-            .product-gallery img { border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); margin: 8px; border: 2px solid #E4C8D3; cursor: pointer; transition: all 0.3s ease; max-width: 200px; }
-            .product-gallery img:hover { transform: scale(1.05); box-shadow: 0 8px 30px rgba(201,168,76,0.3); border-color: #40363C; }
-            .btn-whatsapp { display: inline-block; margin-top: 18px; padding: 12px 30px; background: linear-gradient(135deg,#25D366,#128C7E); color: #fff; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; border-radius: 25px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(37,211,102,0.3); }
-            .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(37,211,102,0.5); background: linear-gradient(135deg,#2ee07a,#128C7E); color: #fff; }
-            blockquote.mavs-testimonial { max-width: 700px; margin: 0 auto 25px; padding: 30px 40px; background: rgba(201,168,76,0.06); border-radius: 15px; border: 1px solid rgba(201,168,76,0.2); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
-            blockquote.mavs-testimonial p { font-size: 1.3em; font-style: italic; color: #9B59B6; text-align: center; margin-bottom: 10px; }
-            blockquote.mavs-testimonial footer { font-size: 0.9em; color: #E4C8D3; text-align: right; }
-            .whatsapp-float { position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: all 0.3s ease; z-index: 1000; }
-            .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.6); }
-            .whatsapp-float img { display: block; }
-            .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; align-items: center; justify-content: center; cursor: pointer; }
-            .lightbox-cerrar { position: absolute; top: 25px; right: 40px; font-size: 3em; color: #fff; cursor: pointer; transition: color 0.3s ease; line-height: 1; }
-            .lightbox-cerrar:hover { color: #c9a84c; }
-            .lightbox-imagen { max-width: 90%; max-height: 85%; border-radius: 8px; border: 3px solid #c9a84c; box-shadow: 0 0 50px rgba(201,168,76,0.2); cursor: default; }
-            .confianza-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
-            .confianza-item { padding: 30px 20px; background: #FFFFFF; border-radius: 12px; border: 1px solid #E4C8D3; text-align: center; transition: all 0.3s ease; }
-            .confianza-item:hover { transform: translateY(-5px); border-color: #40363C; }
-            .confianza-icono { display: block; font-size: 2.8em; margin-bottom: 15px; }
-            .confianza-item h3 { color: #40363C; font-size: 1.15em; margin-top: 0; margin-bottom: 10px; letter-spacing: 1px; }
-            .confianza-item p { font-size: 0.95em; color: #8B7485; text-align: center; margin-bottom: 0; }
-            .mavs-contact ul { list-style: none; display: inline-block; text-align: left; }
-            .mavs-contact ul li { padding: 8px 0; font-size: 1.05em; }
-            .mavs-contact ul li strong { color: #40363C; margin-right: 8px; }
-            .mavs-form { max-width: 500px; margin: 25px auto 0; padding: 30px; background: #FFFFFF; border-radius: 15px; border: 1px solid rgba(201,168,76,0.15); }
-            .mavs-form .form-group { margin-bottom: 20px; text-align: left; }
-            .mavs-form label { display: block; font-size: 0.85em; color: #8B7485; margin-bottom: 5px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-            .mavs-form input, .mavs-form textarea { width: 100%; padding: 12px 15px; background: #F8EFEB; border: 1px solid rgba(201,168,76,0.3); border-radius: 8px; color: #40363C; font-size: 1em; }
-            .mavs-form input:focus, .mavs-form textarea:focus { outline: none; border-color: #40363C; box-shadow: 0 0 15px rgba(201,168,76,0.2); }
-            .mavs-form .btn-submit { background: #40363C; color: #F8EFEB; padding: 14px 40px; border: none; border-radius: 25px; font-size: 1em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: all 0.3s ease; }
-            .mavs-form .btn-submit:hover { background: #DAAB69; transform: translateY(-2px); box-shadow: 0 5px 20px rgba(201,168,76,0.4); }
-        </style>
+        <link href="css/mavs-styles.css" rel="stylesheet">
     </head>
 
     <body data-spy="scroll" data-offset="71" data-target="#navbarMavs">
@@ -59,40 +26,49 @@
         </div>
 
         <header class="header-main header-transparent">
-            <div class="top-bar">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 ml-auto">
-                            <div class="float-right clearfix top-socials">
-                                <a href="https://www.instagram.com/mavs_jewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-instagram">
-                                    <i class="fa fa-instagram"></i>
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                                <a href="https://www.tiktok.com/@mavs_jewerly" target="_blank" class="social-icon-sm si-dark si-dark-round si-twitter">
-                                    <i class="fa fa-twitter"></i>
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                                <a href="https://www.facebook.com/MvJewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-facebook">
-                                    <i class="fa fa-facebook"></i>
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                                <a href="https://wa.me/56989234239" target="_blank" class="social-icon-sm si-dark si-dark-round si-linkedin">
-                                    <i class="fa fa-whatsapp"></i>
-                                    <i class="fa fa-whatsapp"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            
+<div class="top-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center top-socials">
+
+                    <a href="https://www.instagram.com/mavs_jewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@mavs_jewerly" target="_blank" class="social-icon-sm si-dark si-dark-round si-tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/MvJewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="https://wa.me/56989234239" target="_blank" class="social-icon-sm si-dark si-dark-round si-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+
                 </div>
             </div>
+        </div>
+    </div>
+</div> <!--fin del top-bar-->
+
+            <div class="text-center" style="padding: 12px 0 0px 0;">
+                <a href="index.html">
+                    <img src="images/mavs/logo-mavs.png"
+                     alt="Mavs Jewelry"
+                      style="height:90px; width:90px; object-fit:cover; border-radius:50%; box-shadow: 0 4px 15px rgba(0,0,0,.15);">
+                </a>
+            </div>
+
             <nav class="navbar navbar-expand-lg navbar-light bg-faded">
                 <div class="container">
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarMavs" aria-controls="navbarMavs" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img class='logo logo-light hidden-md-down' src="images/mavs/logo-mavs.png" alt="Mavs Jewelry">
-                    </a>
+                    
                     <div id="navbarMavs" class="navbar-collapse collapse">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item"><a data-scroll class="nav-link active" href="#quienes-somos">Quiénes Somos</a></li>
@@ -101,8 +77,8 @@
                             <li class="nav-item"><a data-scroll class="nav-link" href="#confianza">Confianza</a></li>
                             <li class="nav-item"><a data-scroll class="nav-link" href="#testimonios">Testimonios</a></li>
                             <li class="nav-item"><a data-scroll class="nav-link" href="#mision">Misión</a></li>
-                            <li class="nav-item"><a data-scroll class="nav-link" href="#contacto">Contacto</a></li>
-                            <li class="nav-item"><a data-scroll class="nav-link btn btn-primary" href="https://wa.me/56989234239" target="_blank">Cotizar</a></li>
+                            <li class="nav-item"><a data-scroll class="nav-link" href="#footer-contacto">Contacto</a></li>
+                            <li class="nav-item"><a data-scrosll class="nav-link btn btn-primary" href="https://wa.me/56989234239" target="_blank">Cotizar</a></li>
                         </ul>
                     </div>
                 </div>
@@ -114,7 +90,16 @@
             <div id="slider1" class="rev_slider fullwidthabanner" data-version="5.0">
                 <ul>
                     <li data-transition="random">
-                        <img src="images/mavs/fondo.png" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <img src="images/mavs/fondo.png" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <div class="tp-caption tp-resizeme slider-box"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','70']"
+                             data-width="['760','720','640','300']" data-height="['260','240','220','220']"
+                             data-whitespace="normal"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="400"></div>
                         <div class="tp-caption tp-resizeme slider-title"
                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                              data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
@@ -143,7 +128,16 @@
                              data-start="1500"><a href="https://wa.me/56989234239" target="_blank" class="btn btn-xl btn-dark btn-primary">Cotizar por WhatsApp</a></div>
                     </li>
                     <li data-transition="random">
-                        <img src="images/mavs/producto-plata-1.jpg" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <img src="images/mavs/producto-plata-1.jpg" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <div class="tp-caption tp-resizeme slider-box"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','70']"
+                             data-width="['760','720','640','300']" data-height="['260','240','220','220']"
+                             data-whitespace="normal"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="400"></div>
                         <div class="tp-caption tp-resizeme slider-title"
                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                              data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
@@ -172,7 +166,16 @@
                              data-start="1500"><a href="https://wa.me/56989234239" target="_blank" class="btn btn-xl btn-primary">Cotizar</a></div>
                     </li>
                     <li data-transition="random">
-                        <img src="images/mavs/producto-mostacilla-1.jpg" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <img src="images/mavs/producto-mostacilla-1.jpg" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <div class="tp-caption tp-resizeme slider-box"
+                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','70']"
+                             data-width="['760','720','640','300']" data-height="['260','240','220','220']"
+                             data-whitespace="normal"
+                             data-transform_idle="o:1;"
+                             data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                             data-transform_out="auto:auto;s:300;"
+                             data-start="400"></div>
                         <div class="tp-caption tp-resizeme slider-title"
                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                              data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
@@ -206,17 +209,17 @@
         <!-- end slider revolution -->
 
         <!-- Quiénes Somos -->
-        <div class="bg-white" id="quienes-somos">
+        <div class="bg-faded" id="quienes-somos">
             <div class="container pt90 pb60">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb30">
-                        <h3 class="h1 font300 mb30"><i class="fa-regular fa-gem" style="color:#c9a84c;"></i> Quiénes Somos</h3>
+                        <h3 class="h1 font300 mb30"><i class="fa-regular fa-gem" style="color:var(--mavs-gold);"></i> Quiénes Somos</h3>
                         <p>Somos un emprendimiento que nació de la pasión por transformar la plata y las piedras semipreciosas en joyas que transmiten energía, belleza y significado. Cada creación es elaborada a mano con dedicación, cuidando cada detalle para que sea más que un accesorio: un símbolo de conexión y autenticidad.</p>
                         <p>Creemos que la elegancia también puede ser espiritual, y nuestras piezas buscan acompañar a cada persona en su camino.</p>
                         <a href="https://wa.me/56989234239" target="_blank" class="btn btn-dark">Cotizar por WhatsApp</a>
                     </div>
                     <div class="col-lg-6 mb30">
-                        <img src="images/mavs/logo-mavs.png" alt="Mavs Jewelry" class="img-fluid">
+                        <img src="images/mavs/logo-mavs.png" alt="Mavs Jewelry" class="img-fluid" style="border-radius:50%; box-shadow: 0 4px 15px rgba(0,0,0,.15);">
                     </div>
                 </div>
             </div>
@@ -226,7 +229,7 @@
         <div class="bg-primary pt90 pb90" id="productos">
             <div class="container">
                 <div class="center-title">
-                    <h2 class="text-white">Nuestros Productos</h2>
+                    <h2 class="text-white"><i class="fa-solid fa-gift"></i> Nuestros Productos</h2>
                     <p class="text-white-gray">Joyas artesanales hechas a mano con amor y dedicación</p>
                 </div>
                 <div class="row">
@@ -300,7 +303,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 ml-auto pt80 pb80">
-                        <h2 class="mb40"><i class="fa-solid fa-feather-pointed" style="color:#c9a84c;"></i> Nuestra Historia</h2>
+                        <h2 class="mb40"><i class="fa-solid fa-feather-pointed"></i> Nuestra Historia</h2>
                         <div class="clearfix">
                             <h4>María Angélica · Orfebre</h4>
                             <p>Mi nombre es María Angélica, soy de oficio orfebre y este emprendimiento nació desde la resiliencia y el deseo de transformar las dificultades en inspiración. A través de la plata y las piedras semipreciosas, la mostacilla calibrada y el alambrismo, encontré un camino para expresar fuerza, elegancia y misticismo.</p>
@@ -313,11 +316,11 @@
         </div>
 
         <!-- Testimonios -->
-        <div class="pt90 pb90 bg-white">
+        <div class="bg-parallax pt100 pb100" id="testimonios" data-jarallax='{"speed": 0.2}' style="background:url(images/mavs/fondo.png) no-repeat; background-size:cover;">
             <div class="container">
                 <div class="center-title">
-                    <h2>Testimonios</h2>
-                    <p>Lo que dicen nuestros clientes</p>
+                    <h2 class="text-dark"><i class="fa-solid fa-star"></i> Testimonios</h2>
+                    <p class="text-muted">Lo que dicen nuestros clientes</p>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-8 mr-auto ml-auto">
@@ -344,27 +347,27 @@
         <div class="bg-dark pt90 pb60" id="confianza">
             <div class="container">
                 <div class="center-title">
-                    <h2 class="text-white">Por Qué Confiar en Nosotros</h2>
+                    <h2 class="text-white"><i class="fa-solid fa-handshake"></i> Por Qué Confiar en Nosotros</h2>
                     <p class="text-white-gray">Nuestros valores</p>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-3 mb30">
-                        <span style="font-size:3.5em;">&#x1F48E;</span>
+                        <i class="fa-regular fa-gem" style="font-size:3.5em; color:var(--mavs-gold);"></i>
                         <h4 class="text-white">Materiales Certificados</h4>
                         <p>Plata nacional, piedras semipreciosas auténticas y cristales premium garantizados.</p>
                     </div>
                     <div class="col-md-3 mb30">
-                        <span style="font-size:3.5em;">&#x1F3ED;</span>
+                        <i class="fa-regular fa-hand-peace" style="font-size:3.5em; color:var(--mavs-gold);"></i>
                         <h4 class="text-white">Hecho a Mano</h4>
                         <p>Cada pieza es elaborada artesanalmente por María Angélica, orfebre de oficio.</p>
                     </div>
                     <div class="col-md-3 mb30">
-                        <span style="font-size:3.5em;">&#x1F4E6;</span>
+                        <i class="fa-solid fa-truck" style="font-size:3.5em; color:var(--mavs-gold);"></i>
                         <h4 class="text-white">Envío Seguro</h4>
                         <p>Empacamos con cuidado para que tu joya llegue en perfectas condiciones a todo Chile.</p>
                     </div>
                     <div class="col-md-3 mb30">
-                        <span style="font-size:3.5em;">&#x1F468;&#x200D;&#x1F4BB;</span>
+                        <i class="fa-regular fa-comments" style="font-size:3.5em; color:var(--mavs-gold);"></i>
                         <h4 class="text-white">Atención Personalizada</h4>
                         <p>Te asesoramos vía WhatsApp para encontrar la joya perfecta para ti o para regalar.</p>
                     </div>
@@ -373,11 +376,11 @@
         </div>
 
         <!-- Misión y Visión (parallax) -->
-        <div class="bg-parallax parallax-overlay pt100 pb100" id="mision" data-jarallax='{"speed": 0.2}' style="background:url(images/mavs/fondo-old.png) no-repeat; background-size:cover;">
+        <div class="bg-parallax pt100 pb100" id="mision" data-jarallax='{"speed": 0.2}' style="background:url(images/mavs/fondo.png) no-repeat; background-size:cover;">
             <div class="container">
                 <div class="center-title">
-                    <h2 class="text-white">Misión y Visión</h2>
-                    <p class="text-white-gray">Nuestra razón de ser</p>
+                    <h2 class="text-dark"><i class="fa-regular fa-eye"></i> Misión y Visión</h2>
+                    <p class="text-muted">Nuestra razón de ser</p>
                 </div>
                 <div class="food-menu-card">
                     <div>
@@ -389,14 +392,14 @@
                             <div role="tabpanel" class="tab-pane active show fade" id="mision-tab">
                                 <div class="row">
                                     <div class="col-md-8 mr-auto ml-auto text-center">
-                                        <p class="lead text-white" style="font-size:1.2em; line-height:1.9;">Mi misión es transformar la plata y las piedras semipreciosas en joyas únicas que reflejen resiliencia y misticismo y agregar un atizbo de elegancia a la mostacilla con cristales y alambrismo. Cada diseño nace con el propósito de inspirar y conectar con la esencia de cada persona.</p>
+                                        <p class="lead" style="font-size:1.2em; line-height:1.9;">Mi misión es transformar la plata y las piedras semipreciosas en joyas únicas que reflejen resiliencia y misticismo y agregar un atizbo de elegancia a la mostacilla con cristales y alambrismo. Cada diseño nace con el propósito de inspirar y conectar con la esencia de cada persona.</p>
                                     </div>
                                 </div>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="vision-tab">
                                 <div class="row">
                                     <div class="col-md-8 mr-auto ml-auto text-center">
-                                        <p class="lead text-white" style="font-size:1.2em; line-height:1.9;">Mi visión es convertir a Mavs Jewelry en un referente de joyas artesanales en plata con piedras semipreciosas, mostacilla y alambrismo, reconocidos por transmitir elegancia, energía y significado en cada creación. Aspiramos a que cada joya sea un puente entre la belleza externa y la fuerza interior, inspirando a quienes la llevan a brillar con autenticidad.</p>
+                                        <p class="lead" style="font-size:1.2em; line-height:1.9;">Mi visión es convertir a Mavs Jewelry en un referente de joyas artesanales en plata con piedras semipreciosas, mostacilla y alambrismo, reconocidos por transmitir elegancia, energía y significado en cada creación. Aspiramos a que cada joya sea un puente entre la belleza externa y la fuerza interior, inspirando a quienes la llevan a brillar con autenticidad.</p>
                                     </div>
                                 </div>
                             </div>
@@ -410,43 +413,21 @@
         <div class="pt90 pb90 bg-dark clearfix" id="galeria">
             <div class="container gallery-row clearfix">
                 <div class="center-title">
-                    <h2 class="text-white">Galería de Productos</h2>
+                    <h2 class="text-white"><i class="fa-solid fa-ring"></i> Galería de Productos</h2>
                     <p class="text-white-gray">Cada pieza es única, hecha a mano con dedicación</p>
                 </div>
-                <a href="images/mavs/producto-plata-1.jpg">
-                    <img src="images/mavs/producto-plata-1.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/producto-plata-2.jpg">
-                    <img src="images/mavs/producto-plata-2.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/producto-plata-3.jpg">
-                    <img src="images/mavs/producto-plata-3.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/producto-plata-4.jpg">
-                    <img src="images/mavs/producto-plata-4.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/producto-mostacilla-1.jpg">
-                    <img src="images/mavs/producto-mostacilla-1.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/producto-mostacilla-2.jpg">
-                    <img src="images/mavs/producto-mostacilla-2.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/producto-mostacilla-3.jpg">
-                    <img src="images/mavs/producto-mostacilla-3.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/producto-alambrismo-1.jpg">
-                    <img src="images/mavs/producto-alambrismo-1.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/fundadora.jpg">
-                    <img src="images/mavs/fundadora.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/logo-mavs.png">
-                    <img src="images/mavs/logo-mavs.png" alt="" class="img-fluid">
-                </a>
+                <img src="images/mavs/producto-plata-1.jpg" alt="Collar de plata con piedras semipreciosas" class="img-fluid gallery-lightbox">
+                <img src="images/mavs/producto-plata-2.jpg" alt="Aros de plata con cristales Swarovski" class="img-fluid gallery-lightbox">
+                <img src="images/mavs/producto-plata-3.jpg" alt="Pulsera de plata con lapislázuli" class="img-fluid gallery-lightbox">
+                <img src="images/mavs/producto-plata-4.jpg" alt="Anillo de plata con amatista" class="img-fluid gallery-lightbox">
+                <img src="images/mavs/producto-mostacilla-1.jpg" alt="Collar tejido en mostacilla Miyuki" class="img-fluid gallery-lightbox">
+                <img src="images/mavs/producto-mostacilla-2.jpg" alt="Aros de mostacilla calibrada con cristales checos" class="img-fluid gallery-lightbox">
+                <img src="images/mavs/producto-mostacilla-3.jpg" alt="Pulsera de mostacilla con patrón geométrico" class="img-fluid gallery-lightbox">
+                <img src="images/mavs/producto-alambrismo-1.jpg" alt="Aros en técnica de alambrismo con cristales" class="img-fluid gallery-lightbox">
             </div>
         </div>
 
-        <!-- Contacto -->
+        <!-- Contacto 
         <div id="contacto">
             <div class="container pt90 pb60">
                 <div class="center-title">
@@ -488,9 +469,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
-        <footer class="footer pt50 pb20">
+        <footer class="footer pt50 pb20" id="footer-contacto">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 mb30">
@@ -506,27 +487,26 @@
                             <li><a href="#productos" data-scroll>Productos</a></li>
                             <li><a href="#historia" data-scroll>Historia</a></li>
                             <li><a href="#testimonios" data-scroll>Testimonios</a></li>
-                            <li><a href="#contacto" data-scroll>Contacto</a></li>
+                            <li><a href="#footer-contacto" data-scroll>Contacto</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 mb30">
                         <h4 class="mb30">Síguenos</h4>
                         <span class="clearfix">
                             <a href="https://www.instagram.com/mavs_jewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-instagram">
-                                <i class="fa fa-instagram"></i>
-                                <i class="fa fa-instagram"></i>
+                                <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://www.tiktok.com/@mavs_jewerly" target="_blank" class="social-icon-sm si-dark si-dark-round si-twitter">
-                                <i class="fa fa-twitter"></i>
-                                <i class="fa fa-twitter"></i>
+
+                            <a href="https://www.tiktok.com/@mavs_jewerly" target="_blank" class="social-icon-sm si-dark si-dark-round si-tiktok">
+                                <i class="fab fa-tiktok"></i>
                             </a>
+
                             <a href="https://www.facebook.com/MvJewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-facebook">
-                                <i class="fa fa-facebook"></i>
-                                <i class="fa fa-facebook"></i>
+                                <i class="fab fa-facebook"></i>
                             </a>
-                            <a href="https://wa.me/56989234239" target="_blank" class="social-icon-sm si-dark si-dark-round si-linkedin">
-                                <i class="fa fa-whatsapp"></i>
-                                <i class="fa fa-whatsapp"></i>
+
+                            <a href="https://wa.me/56989234239" target="_blank" class="social-icon-sm si-dark si-dark-round si-whatsapp">
+                                <i class="fab fa-whatsapp"></i>
                             </a>
                         </span>
                         <div class="pt30">
@@ -589,19 +569,24 @@
         </script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                var galerias = document.querySelectorAll('.product-gallery');
                 var lightbox = document.getElementById('lightbox');
                 var lightboxImg = lightbox.querySelector('.lightbox-imagen');
                 var closeBtn = lightbox.querySelector('.lightbox-cerrar');
 
-                galerias.forEach(function (galeria) {
-                    galeria.addEventListener('click', function (e) {
-                        if (e.target.tagName === 'IMG') {
-                            lightboxImg.src = e.target.src;
-                            lightboxImg.alt = e.target.alt;
-                            lightbox.style.display = 'flex';
-                        }
+                function abrirLightbox(img) {
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightbox.style.display = 'flex';
+                }
+
+                document.querySelectorAll('.product-gallery').forEach(function (g) {
+                    g.addEventListener('click', function (e) {
+                        if (e.target.tagName === 'IMG') abrirLightbox(e.target);
                     });
+                });
+
+                document.querySelectorAll('.gallery-lightbox').forEach(function (img) {
+                    img.addEventListener('click', function () { abrirLightbox(img); });
                 });
 
                 function cerrarLightbox() { lightbox.style.display = 'none'; }
