@@ -17,164 +17,7 @@
         <link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
         <link href="css/style-restaurant.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
-
-            :root {
-                --mavs-bg: #FDF8FA; 
-                --mavs-dark: #4A3E45;
-                --mavs-gold: #E8D39C;
-                --mavs-purple: #D8B8F0;
-                --mavs-rose: #F3CADC;
-                --mavs-muted: #8B7A84;
-                --mavs-card-bg: #FFFFFF;
-                --mavs-gold-hover: #DDBE7C;
-                --mavs-purple2: #A983C7;
-            }
-
-            body { font-family: 'Montserrat', sans-serif; background-color: var(--mavs-bg); color: var(--mavs-dark); }
-            h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; color: var(--mavs-dark); }
-            a { color: var(--mavs-purple); }
-            a:hover { color: var(--mavs-dark); }
-
-            .top-bar { background: var(--mavs-dark) !important; }
-            .top-bar a { color: var(--mavs-bg) !important; }
-            .top-bar a:hover { color: var(--mavs-gold) !important; }
-
-            .header-main.header-transparent { border-bottom: 3px solid var(--mavs-gold); }
-            .navbar-light.bg-faded {
-                background: rgba(253, 248, 250,.90) !important;
-                backdrop-filter: blur(5px);
-            }
-            .navbar-light .navbar-nav .nav-link { color: var(--mavs-purple2) !important; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85em; }
-            .navbar-light .navbar-nav .nav-link:hover,
-            .navbar-light .navbar-nav .nav-link.active { color: var(--mavs-gold) !important; }
-
-            .btn-primary { background: var(--mavs-gold) !important; border-color: var(--mavs-gold) !important; color: var(--mavs-dark) !important; font-weight: 700 !important; }
-            .btn-primary:hover { background: var(--mavs-gold-hover) !important; border-color: var(--mavs-gold-hover) !important; color: var(--mavs-dark) !important; }
-            .btn-dark { background: var(--mavs-dark) !important; border-color: var(--mavs-dark) !important; color: var(--mavs-bg) !important; font-weight: 700 !important; }
-            .btn-dark:hover { background: var(--mavs-gold) !important; border-color: var(--mavs-gold) !important; color: var(--mavs-dark) !important; }
-            .btn-outline-primary { color: var(--mavs-gold) !important; border-color: var(--mavs-gold) !important; }
-            .btn-outline-primary:hover { background: var(--mavs-gold) !important; border-color: var(--mavs-gold) !important; color: var(--mavs-dark) !important; }
-            .btn-xl { border-radius: 30px !important; }
-
-            .bg-primary { background: var(--mavs-dark) !important; }
-            .bg-dark { background: var(--mavs-dark) !important; }
-            .bg-white { background: var(--mavs-card-bg) !important; }
-            .bg-faded { background: var(--mavs-bg) !important; }
-
-            .center-title h2 { color: var(--mavs-dark) !important; font-family: 'Cormorant Garamond', serif; }
-            .center-title h2.text-white { color: #fff !important; }
-            .center-title p { color: var(--mavs-muted) !important; }
-            .center-title .text-white-gray { color: rgba(255,255,255,0.7) !important; }
-
-            .section-title i { margin-right: 10px; color: var(--mavs-gold); }
-
-            h3.h1.font300 { color: var(--mavs-dark); }
-            h3.h1.font300 i { color: var(--mavs-gold); }
-
-            .carousel-cards .card-image h4 { color: var(--mavs-dark); }
-            .carousel-cards .card-image .lead { color: var(--mavs-gold); font-weight: 700; }
-            .carousel-cards .card-image:hover h4 { color: var(--mavs-gold); }
-
-            .half-image-content { background: var(--mavs-bg) !important; }
-
-            .food-menu-card .nav.tabs-menu-nav .nav-link { color: rgba(255,255,255,0.7) !important; }
-            .food-menu-card .nav.tabs-menu-nav .nav-link.active,
-            .food-menu-card .nav.tabs-menu-nav .nav-link:hover { color: var(--mavs-gold) !important; border-color: var(--mavs-gold) !important; }
-
-            .footer { background: var(--mavs-dark) !important; border-top: 3px solid var(--mavs-gold); }
-            .footer h4 { color: var(--mavs-gold); }
-            .footer p, .footer span { color: var(--mavs-bg); }
-            .footer .lead { color: var(--mavs-gold); }
-            .footer a { color: var(--mavs-rose); }
-            .footer a:hover { color: var(--mavs-gold); }
-
-            .slider-box {
-                background: var(--mavs-bg);
-                border: 1px solid var(--mavs-purple2);
-                border-radius: 28px;
-                box-shadow: 0 0 0 rgba(0,0,0,0.05);
-                z-index: 1;
-            }
-
-            .social-icon-sm.si-dark.si-dark-round { background: var(--mavs-muted) !important; }
-            .social-icon-sm.si-dark.si-dark-round:hover { background: var(--mavs-gold) !important; }
-
-            .back-to-top { background: var(--mavs-gold) !important; color: var(--mavs-dark) !important; }
-            .back-to-top:hover { background: var(--mavs-gold-hover) !important; }
-
-            .parallax-overlay { background-color: rgba(74,62,69,.75) !important; background-blend-mode: overlay; }
-
-            .product-gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 15px; }
-            .product-gallery img { border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); margin: 8px; border: 2px solid var(--mavs-rose); cursor: pointer; transition: all 0.3s ease; max-width: 200px; }
-            .product-gallery img:hover { transform: scale(1.05); box-shadow: 0 8px 30px rgba(232,211,156,.30); border-color: var(--mavs-dark); }
-
-            .btn-whatsapp { display: inline-block; margin: 18px 0 0; padding: 12px 30px; background: linear-gradient(135deg,#25D366,#128C7E); color: #fff; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; border-radius: 25px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(37,211,102,0.3); }
-            .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(37,211,102,0.5); background: linear-gradient(135deg,#2ee07a,#128C7E); color: #fff; }
-
-            blockquote.mavs-testimonial { max-width: 700px; margin: 0 auto 25px; padding: 30px 40px; background: rgba(232,211,156,.10); border-radius: 15px; border: 1px solid rgba(232,211,156,.20); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
-            blockquote.mavs-testimonial p { font-size: 1.3em; font-style: italic; color: var(--mavs-purple); text-align: center; margin-bottom: 10px; }
-            blockquote.mavs-testimonial footer { font-size: 0.9em; color: var(--mavs-rose); text-align: right; }
-
-            .whatsapp-float { position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: all 0.3s ease; z-index: 1000; }
-            .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.6); }
-            .whatsapp-float img { display: block; }
-
-            .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; align-items: center; justify-content: center; cursor: pointer; }
-            .lightbox-cerrar { position: absolute; top: 25px; right: 40px; font-size: 3em; color: #fff; cursor: pointer; transition: color 0.3s ease; line-height: 1; }
-            .lightbox-cerrar:hover { color: var(--mavs-gold); }
-            .lightbox-imagen { max-width: 90%; max-height: 85%; border-radius: 8px; border: 3px solid var(--mavs-gold); box-shadow: 0 0 50px rgba(232,211,156,.20); cursor: default; }
-
-            .confianza-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
-            .confianza-item { padding: 30px 20px; background: #FFFFFF; border-radius: 12px; border: 1px solid var(--mavs-rose); text-align: center; transition: all 0.3s ease; }
-            .confianza-item:hover { transform: translateY(-5px); border-color: var(--mavs-dark); }
-            .confianza-icono { display: block; font-size: 2.8em; margin-bottom: 15px; }
-            .confianza-item h3 { color: var(--mavs-dark); font-size: 1.15em; margin-top: 0; margin-bottom: 10px; letter-spacing: 1px; }
-            .confianza-item p { font-size: 0.95em; color: var(--mavs-muted); text-align: center; margin-bottom: 0; }
-
-            .mavs-contact ul { list-style: none; display: inline-block; text-align: left; }
-            .mavs-contact ul li { padding: 8px 0; font-size: 1.05em; }
-            .mavs-contact ul li strong { color: var(--mavs-dark); margin-right: 8px; }
-
-            .mavs-form { max-width: 500px; margin: 25px auto 0; padding: 30px; background: #FFFFFF; border-radius: 15px; border: 1px solid rgba(232,211,156,.10); }
-            .mavs-form .form-group { margin-bottom: 20px; text-align: left; }
-            .mavs-form label { display: block; font-size: 0.85em; color: var(--mavs-muted); margin-bottom: 5px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-            .mavs-form input, .mavs-form textarea { width: 100%; padding: 12px 15px; background: var(--mavs-bg); border: 1px solid rgba(232,211,156,.30); border-radius: 8px; color: var(--mavs-dark); font-size: 1em; }
-            .mavs-form input:focus, .mavs-form textarea:focus { outline: none; border-color: var(--mavs-dark); box-shadow: 0 0 15px rgba(232,211,156,.20); }
-            .mavs-form .btn-submit { background: var(--mavs-dark); color: var(--mavs-bg); padding: 14px 40px; border: none; border-radius: 25px; font-size: 1em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: all 0.3s ease; }
-            .mavs-form .btn-submit:hover { background: var(--mavs-gold-hover); transform: translateY(-2px); box-shadow: 0 5px 20px rgba(232,211,156,.40); }
-
-            .tp-caption.slider-title { color:var(--mavs-purple) !important; font-family: 'Cormorant Garamond', serif !important; }
-            .tp-caption.slider-caption { color: rgba(0, 0, 0, 0.85) !important; }
-
-            .tp-caption.slider-title2 { color:var(--mavs-purple2) !important; font-family: 'Cormorant Garamond', serif !important; }
-            .tp-caption.slider-caption2 { color: rgba(5, 0, 7, 0.85) !important; }
-
-            .rev_slider .tparrows { background: var(--mavs-gold) !important; border-radius: 50% !important; width: 45px !important; height: 45px !important; }
-            .rev_slider .tparrows:before { color: var(--mavs-dark) !important; font-size: 20px !important; line-height: 45px !important; }
-            .rev_slider .tparrows:hover { background: var(--mavs-gold-hover) !important; }
-            .rev_slider .tp-bullets .tp-bullet { background: rgba(255,255,255,0.4) !important; width: 12px !important; height: 12px !important; }
-            .rev_slider .tp-bullets .tp-bullet.selected { background: var(--mavs-gold) !important; }
-
-            .owl-theme .owl-dots .owl-dot.active span { background: var(--mavs-gold) !important; }
-            .owl-theme .owl-dots .owl-dot:hover span { background: var(--mavs-gold-hover) !important; }
-            .owl-theme .owl-nav [class*=owl-] { background: var(--mavs-gold) !important; color: var(--mavs-dark) !important; border-radius: 50% !important; width: 40px !important; height: 40px !important; font-size: 18px !important; line-height: 40px !important; margin: 0 5px !important; box-shadow: 0 2px 10px rgba(0,0,0,0.2) !important; }
-            .owl-theme .owl-nav [class*=owl-]:hover { background: var(--mavs-gold-hover) !important; }
-
-            .carousel-cards .owl-nav { position: absolute; top: 50%; width: 100%; transform: translateY(-50%); margin: 0; }
-            .carousel-cards .owl-nav .owl-prev { position: absolute; left: -20px; }
-            .carousel-cards .owl-nav .owl-next { position: absolute; right: -20px; }
-
-            .gallery-row a img { border: 3px solid var(--mavs-rose) !important; border-radius: 8px; transition: all 0.3s ease; }
-            .gallery-row a:hover img { border-color: var(--mavs-gold) !important; transform: scale(1.03); }
-
-            #preloader { background: var(--mavs-bg) !important; }
-            #preloader-inner { border-color: var(--mavs-gold) !important; border-top-color: var(--mavs-dark) !important; }
-
-            .navbar-light .navbar-toggler { border-color: var(--mavs-dark); }
-            .navbar-light .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%234A3E45' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
-        </style>
+        <link href="css/mavs-styles.css" rel="stylesheet">
     </head>
 
     <body data-spy="scroll" data-offset="71" data-target="#navbarMavs">
@@ -212,7 +55,7 @@
     </div>
 </div> <!--fin del top-bar-->
 
-            <div class="text-center" style="background: var(--mavs-bg); padding: 12px 0 0px 0;">
+            <div class="text-center" style="padding: 12px 0 0px 0;">
                 <a href="index.html">
                     <img src="images/mavs/logo-mavs.png"
                      alt="Mavs Jewelry"
@@ -234,7 +77,7 @@
                             <li class="nav-item"><a data-scroll class="nav-link" href="#confianza">Confianza</a></li>
                             <li class="nav-item"><a data-scroll class="nav-link" href="#testimonios">Testimonios</a></li>
                             <li class="nav-item"><a data-scroll class="nav-link" href="#mision">Misión</a></li>
-                            <li class="nav-item"><a data-scroll class="nav-link" href="#contacto">Contacto</a></li>
+                            <li class="nav-item"><a data-scroll class="nav-link" href="#footer-contacto">Contacto</a></li>
                             <li class="nav-item"><a data-scrosll class="nav-link btn btn-primary" href="https://wa.me/56989234239" target="_blank">Cotizar</a></li>
                         </ul>
                     </div>
@@ -247,7 +90,7 @@
             <div id="slider1" class="rev_slider fullwidthabanner" data-version="5.0">
                 <ul>
                     <li data-transition="random">
-                        <img src="images/mavs/fondo.png" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <img src="images/mavs/fondo.png" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
                         <div class="tp-caption tp-resizeme slider-box"
                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                              data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','70']"
@@ -285,7 +128,7 @@
                              data-start="1500"><a href="https://wa.me/56989234239" target="_blank" class="btn btn-xl btn-dark btn-primary">Cotizar por WhatsApp</a></div>
                     </li>
                     <li data-transition="random">
-                        <img src="images/mavs/producto-plata-1.jpg" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <img src="images/mavs/producto-plata-1.jpg" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
                         <div class="tp-caption tp-resizeme slider-box"
                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                              data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','70']"
@@ -323,7 +166,7 @@
                              data-start="1500"><a href="https://wa.me/56989234239" target="_blank" class="btn btn-xl btn-primary">Cotizar</a></div>
                     </li>
                     <li data-transition="random">
-                        <img src="images/mavs/producto-mostacilla-1.jpg" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
+                        <img src="images/mavs/producto-mostacilla-1.jpg" alt="" width="1920" height="1000" data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg">
                         <div class="tp-caption tp-resizeme slider-box"
                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                              data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','70']"
@@ -366,7 +209,7 @@
         <!-- end slider revolution -->
 
         <!-- Quiénes Somos -->
-        <div class="bg-white" id="quienes-somos">
+        <div class="bg-faded" id="quienes-somos">
             <div class="container pt90 pb60">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb30">
@@ -376,7 +219,7 @@
                         <a href="https://wa.me/56989234239" target="_blank" class="btn btn-dark">Cotizar por WhatsApp</a>
                     </div>
                     <div class="col-lg-6 mb30">
-                        <img src="images/mavs/logo-mavs.png" alt="Mavs Jewelry" class="img-fluid">
+                        <img src="images/mavs/logo-mavs.png" alt="Mavs Jewelry" class="img-fluid" style="border-radius:50%; box-shadow: 0 4px 15px rgba(0,0,0,.15);">
                     </div>
                 </div>
             </div>
@@ -386,7 +229,7 @@
         <div class="bg-primary pt90 pb90" id="productos">
             <div class="container">
                 <div class="center-title">
-                    <h2 class="text-white">Nuestros Productos</h2>
+                    <h2 class="text-white"><i class="fa-solid fa-gift"></i> Nuestros Productos</h2>
                     <p class="text-white-gray">Joyas artesanales hechas a mano con amor y dedicación</p>
                 </div>
                 <div class="row">
@@ -460,7 +303,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 ml-auto pt80 pb80">
-                        <h2 class="mb40"><i class="fa-solid fa-feather-pointed" style="color:#c9a84c;"></i> Nuestra Historia</h2>
+                        <h2 class="mb40"><i class="fa-solid fa-feather-pointed"></i> Nuestra Historia</h2>
                         <div class="clearfix">
                             <h4>María Angélica · Orfebre</h4>
                             <p>Mi nombre es María Angélica, soy de oficio orfebre y este emprendimiento nació desde la resiliencia y el deseo de transformar las dificultades en inspiración. A través de la plata y las piedras semipreciosas, la mostacilla calibrada y el alambrismo, encontré un camino para expresar fuerza, elegancia y misticismo.</p>
@@ -473,11 +316,11 @@
         </div>
 
         <!-- Testimonios -->
-        <div class="pt90 pb90 bg-white">
+        <div class="bg-parallax pt100 pb100" id="testimonios" data-jarallax='{"speed": 0.2}' style="background:url(images/mavs/fondo.png) no-repeat; background-size:cover;">
             <div class="container">
                 <div class="center-title">
-                    <h2>Testimonios</h2>
-                    <p>Lo que dicen nuestros clientes</p>
+                    <h2 class="text-dark"><i class="fa-solid fa-star"></i> Testimonios</h2>
+                    <p class="text-muted">Lo que dicen nuestros clientes</p>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-8 mr-auto ml-auto">
@@ -504,27 +347,27 @@
         <div class="bg-dark pt90 pb60" id="confianza">
             <div class="container">
                 <div class="center-title">
-                    <h2 class="text-white">Por Qué Confiar en Nosotros</h2>
+                    <h2 class="text-white"><i class="fa-solid fa-handshake"></i> Por Qué Confiar en Nosotros</h2>
                     <p class="text-white-gray">Nuestros valores</p>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-3 mb30">
-                        <span style="font-size:3.5em;">&#x1F48E;</span>
+                        <i class="fa-regular fa-gem" style="font-size:3.5em; color:var(--mavs-gold);"></i>
                         <h4 class="text-white">Materiales Certificados</h4>
                         <p>Plata nacional, piedras semipreciosas auténticas y cristales premium garantizados.</p>
                     </div>
                     <div class="col-md-3 mb30">
-                        <span style="font-size:3.5em;">&#x1F3ED;</span>
+                        <i class="fa-regular fa-hand-peace" style="font-size:3.5em; color:var(--mavs-gold);"></i>
                         <h4 class="text-white">Hecho a Mano</h4>
                         <p>Cada pieza es elaborada artesanalmente por María Angélica, orfebre de oficio.</p>
                     </div>
                     <div class="col-md-3 mb30">
-                        <span style="font-size:3.5em;">&#x1F4E6;</span>
+                        <i class="fa-solid fa-truck" style="font-size:3.5em; color:var(--mavs-gold);"></i>
                         <h4 class="text-white">Envío Seguro</h4>
                         <p>Empacamos con cuidado para que tu joya llegue en perfectas condiciones a todo Chile.</p>
                     </div>
                     <div class="col-md-3 mb30">
-                        <span style="font-size:3.5em;">&#x1F468;&#x200D;&#x1F4BB;</span>
+                        <i class="fa-regular fa-comments" style="font-size:3.5em; color:var(--mavs-gold);"></i>
                         <h4 class="text-white">Atención Personalizada</h4>
                         <p>Te asesoramos vía WhatsApp para encontrar la joya perfecta para ti o para regalar.</p>
                     </div>
@@ -533,11 +376,11 @@
         </div>
 
         <!-- Misión y Visión (parallax) -->
-        <div class="bg-parallax parallax-overlay pt100 pb100" id="mision" data-jarallax='{"speed": 0.2}' style="background:url(images/mavs/fondo.png) no-repeat; background-size:cover;">
+        <div class="bg-parallax pt100 pb100" id="mision" data-jarallax='{"speed": 0.2}' style="background:url(images/mavs/fondo.png) no-repeat; background-size:cover;">
             <div class="container">
                 <div class="center-title">
-                    <h2 class="text-white">Misión y Visión</h2>
-                    <p class="text-white-gray">Nuestra razón de ser</p>
+                    <h2 class="text-dark"><i class="fa-regular fa-eye"></i> Misión y Visión</h2>
+                    <p class="text-muted">Nuestra razón de ser</p>
                 </div>
                 <div class="food-menu-card">
                     <div>
@@ -549,14 +392,14 @@
                             <div role="tabpanel" class="tab-pane active show fade" id="mision-tab">
                                 <div class="row">
                                     <div class="col-md-8 mr-auto ml-auto text-center">
-                                        <p class="lead text-white" style="font-size:1.2em; line-height:1.9;">Mi misión es transformar la plata y las piedras semipreciosas en joyas únicas que reflejen resiliencia y misticismo y agregar un atizbo de elegancia a la mostacilla con cristales y alambrismo. Cada diseño nace con el propósito de inspirar y conectar con la esencia de cada persona.</p>
+                                        <p class="lead" style="font-size:1.2em; line-height:1.9;">Mi misión es transformar la plata y las piedras semipreciosas en joyas únicas que reflejen resiliencia y misticismo y agregar un atizbo de elegancia a la mostacilla con cristales y alambrismo. Cada diseño nace con el propósito de inspirar y conectar con la esencia de cada persona.</p>
                                     </div>
                                 </div>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="vision-tab">
                                 <div class="row">
                                     <div class="col-md-8 mr-auto ml-auto text-center">
-                                        <p class="lead text-white" style="font-size:1.2em; line-height:1.9;">Mi visión es convertir a Mavs Jewelry en un referente de joyas artesanales en plata con piedras semipreciosas, mostacilla y alambrismo, reconocidos por transmitir elegancia, energía y significado en cada creación. Aspiramos a que cada joya sea un puente entre la belleza externa y la fuerza interior, inspirando a quienes la llevan a brillar con autenticidad.</p>
+                                        <p class="lead" style="font-size:1.2em; line-height:1.9;">Mi visión es convertir a Mavs Jewelry en un referente de joyas artesanales en plata con piedras semipreciosas, mostacilla y alambrismo, reconocidos por transmitir elegancia, energía y significado en cada creación. Aspiramos a que cada joya sea un puente entre la belleza externa y la fuerza interior, inspirando a quienes la llevan a brillar con autenticidad.</p>
                                     </div>
                                 </div>
                             </div>
@@ -570,43 +413,21 @@
         <div class="pt90 pb90 bg-dark clearfix" id="galeria">
             <div class="container gallery-row clearfix">
                 <div class="center-title">
-                    <h2 class="text-white">Galería de Productos</h2>
+                    <h2 class="text-white"><i class="fa-solid fa-ring"></i> Galería de Productos</h2>
                     <p class="text-white-gray">Cada pieza es única, hecha a mano con dedicación</p>
                 </div>
-                <a href="images/mavs/producto-plata-1.jpg">
-                    <img src="images/mavs/producto-plata-1.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/producto-plata-2.jpg">
-                    <img src="images/mavs/producto-plata-2.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/producto-plata-3.jpg">
-                    <img src="images/mavs/producto-plata-3.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/producto-plata-4.jpg">
-                    <img src="images/mavs/producto-plata-4.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/producto-mostacilla-1.jpg">
-                    <img src="images/mavs/producto-mostacilla-1.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/producto-mostacilla-2.jpg">
-                    <img src="images/mavs/producto-mostacilla-2.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/producto-mostacilla-3.jpg">
-                    <img src="images/mavs/producto-mostacilla-3.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/producto-alambrismo-1.jpg">
-                    <img src="images/mavs/producto-alambrismo-1.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/fundadora.jpg">
-                    <img src="images/mavs/fundadora.jpg" alt="" class="img-fluid">
-                </a>
-                <a href="images/mavs/logo-mavs.png">
-                    <img src="images/mavs/logo-mavs.png" alt="" class="img-fluid">
-                </a>
+                <img src="images/mavs/producto-plata-1.jpg" alt="Collar de plata con piedras semipreciosas" class="img-fluid gallery-lightbox">
+                <img src="images/mavs/producto-plata-2.jpg" alt="Aros de plata con cristales Swarovski" class="img-fluid gallery-lightbox">
+                <img src="images/mavs/producto-plata-3.jpg" alt="Pulsera de plata con lapislázuli" class="img-fluid gallery-lightbox">
+                <img src="images/mavs/producto-plata-4.jpg" alt="Anillo de plata con amatista" class="img-fluid gallery-lightbox">
+                <img src="images/mavs/producto-mostacilla-1.jpg" alt="Collar tejido en mostacilla Miyuki" class="img-fluid gallery-lightbox">
+                <img src="images/mavs/producto-mostacilla-2.jpg" alt="Aros de mostacilla calibrada con cristales checos" class="img-fluid gallery-lightbox">
+                <img src="images/mavs/producto-mostacilla-3.jpg" alt="Pulsera de mostacilla con patrón geométrico" class="img-fluid gallery-lightbox">
+                <img src="images/mavs/producto-alambrismo-1.jpg" alt="Aros en técnica de alambrismo con cristales" class="img-fluid gallery-lightbox">
             </div>
         </div>
 
-        <!-- Contacto -->
+        <!-- Contacto 
         <div id="contacto">
             <div class="container pt90 pb60">
                 <div class="center-title">
@@ -648,9 +469,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
-        <footer class="footer pt50 pb20">
+        <footer class="footer pt50 pb20" id="footer-contacto">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 mb30">
@@ -666,27 +487,26 @@
                             <li><a href="#productos" data-scroll>Productos</a></li>
                             <li><a href="#historia" data-scroll>Historia</a></li>
                             <li><a href="#testimonios" data-scroll>Testimonios</a></li>
-                            <li><a href="#contacto" data-scroll>Contacto</a></li>
+                            <li><a href="#footer-contacto" data-scroll>Contacto</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 mb30">
                         <h4 class="mb30">Síguenos</h4>
                         <span class="clearfix">
                             <a href="https://www.instagram.com/mavs_jewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-instagram">
-                                <i class="fa fa-instagram"></i>
-                                <i class="fa fa-instagram"></i>
+                                <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://www.tiktok.com/@mavs_jewerly" target="_blank" class="social-icon-sm si-dark si-dark-round si-twitter">
-                                <i class="fa fa-twitter"></i>
-                                <i class="fa fa-twitter"></i>
+
+                            <a href="https://www.tiktok.com/@mavs_jewerly" target="_blank" class="social-icon-sm si-dark si-dark-round si-tiktok">
+                                <i class="fab fa-tiktok"></i>
                             </a>
+
                             <a href="https://www.facebook.com/MvJewelry" target="_blank" class="social-icon-sm si-dark si-dark-round si-facebook">
-                                <i class="fa fa-facebook"></i>
-                                <i class="fa fa-facebook"></i>
+                                <i class="fab fa-facebook"></i>
                             </a>
-                            <a href="https://wa.me/56989234239" target="_blank" class="social-icon-sm si-dark si-dark-round si-linkedin">
-                                <i class="fa fa-whatsapp"></i>
-                                <i class="fa fa-whatsapp"></i>
+
+                            <a href="https://wa.me/56989234239" target="_blank" class="social-icon-sm si-dark si-dark-round si-whatsapp">
+                                <i class="fab fa-whatsapp"></i>
                             </a>
                         </span>
                         <div class="pt30">
@@ -749,19 +569,24 @@
         </script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                var galerias = document.querySelectorAll('.product-gallery');
                 var lightbox = document.getElementById('lightbox');
                 var lightboxImg = lightbox.querySelector('.lightbox-imagen');
                 var closeBtn = lightbox.querySelector('.lightbox-cerrar');
 
-                galerias.forEach(function (galeria) {
-                    galeria.addEventListener('click', function (e) {
-                        if (e.target.tagName === 'IMG') {
-                            lightboxImg.src = e.target.src;
-                            lightboxImg.alt = e.target.alt;
-                            lightbox.style.display = 'flex';
-                        }
+                function abrirLightbox(img) {
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightbox.style.display = 'flex';
+                }
+
+                document.querySelectorAll('.product-gallery').forEach(function (g) {
+                    g.addEventListener('click', function (e) {
+                        if (e.target.tagName === 'IMG') abrirLightbox(e.target);
                     });
+                });
+
+                document.querySelectorAll('.gallery-lightbox').forEach(function (img) {
+                    img.addEventListener('click', function () { abrirLightbox(img); });
                 });
 
                 function cerrarLightbox() { lightbox.style.display = 'none'; }
