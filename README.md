@@ -29,7 +29,7 @@ Página web informativa y de exhibición para el emprendimiento Mavs Jewelry. In
 ## Despliegue
 
 - **GitHub:** https://github.com/tadaogard/PaginaMavsJewelry
-- **Netlify:** https://pagina-mavs-jewelry.netlify.app
+- **Netlify:** https://examendiseowebg6.netlify.app
 
 ## Grupo de Trabajo
 
